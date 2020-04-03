@@ -7,7 +7,7 @@
       <small>View Larger</small>
   </a>
   <div class="details">
-    <h3>{{this.rental.title}}</h3>
+    <h3>{{#link-to "rentals.show" rental class=rental.id}}{{this.rental.title}}{{/link-to}}</h3>
     <div class="detail owner">
       <span>Owner:</span>{{this.rental.owner}}
     </div>
@@ -20,5 +20,6 @@
     <div class="details bedrooms">
       <span>Number of Bedrooms: </span> {{this.rental.bedrooms}}
     </div>
+    <LocationMap @location={{this.rental.city}} />
   </div>
 </article>
